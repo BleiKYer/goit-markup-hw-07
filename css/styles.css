@@ -711,7 +711,7 @@ img {
     visibility 750ms var(--time-function);
 }
 
-.backdrop .form {
+.backdrop__form {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -729,7 +729,7 @@ img {
   border-radius: 4px;
 }
 
-.backdrop .close-btn {
+.backdrop__close-btn {
   display: flex;
   align-items: center;
   align-content: center;
@@ -750,7 +750,12 @@ img {
     0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
-.modal-header {
+.backdrop__close-btn:hover .close-icon,
+.backdrop__close-btn:focus .close-icon {
+  fill: var(--accent-color);
+}
+
+.backdrop__header {
   margin-bottom: 12px;
 
   font-weight: 700;
@@ -760,11 +765,11 @@ img {
   color: var(--secondary-text-color);
 }
 
-.order-form-item {
+.order-form__item {
   margin-bottom: 10px;
 }
 
-.order-form-item:last-of-type {
+.order-form__item:last-of-type {
   margin-bottom: 20px;
 }
 
@@ -778,11 +783,11 @@ img {
   color: var(--primary-text-color);
 }
 
-.order-input-wrapper {
+.order-form__input-wrapper {
   position: relative;
 }
 
-.order-input {
+.order-form__input {
   width: 100%;
   padding: 11px 42px;
 
@@ -793,7 +798,7 @@ img {
     border-color 250ms var(--time-function);
 }
 
-.order-svg {
+.order-form__svg {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -802,19 +807,19 @@ img {
   fill: var(--secondary-text-color);
 }
 
-.order-input:focus,
-.order-message:focus {
+.order-form__input:focus,
+.order-form__message:focus {
   border-color: var(--accent-color);
   outline: var(--accent-color);
 }
 
-.order-input:focus + .order-svg {
+.order-form__input:focus + .order-form__svg {
   fill: var(--accent-color);
 
   transition: fill 250ms var(--time-function);
 }
 
-.order-message {
+.order-form__message {
   width: 100%;
   max-height: 120px;
   padding: 12px 16px;
@@ -841,7 +846,14 @@ img {
   color: var(--accent-color);
 }
 
-.order-checkbox {
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.checkbox__order {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -852,14 +864,7 @@ img {
   overflow: hidden;
 }
 
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.checkbox-icon {
+.checkbox__icon {
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -870,11 +875,12 @@ img {
   border-radius: 2px;
 }
 
-.order-checkbox:checked + .checkbox-icon {
+.checkbox__order:checked + .checkbox__icon {
   background-color: var(--accent-color);
   background-image: url(../images/checked.svg);
   background-size: contain;
   background-origin: border-box;
+  border: 1px solid var(--accent-color);
 }
 
 .order-btn {
