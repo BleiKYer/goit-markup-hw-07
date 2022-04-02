@@ -1,10 +1,10 @@
 body {
     color: $primary-text-color;
-    background-color:$primary-bgc;
+    background-color: $primary-bgc;
 
-    font-family: Roboto, sans-serif;
+    font-family: $font-style;
     letter-spacing: 0.03em;
-    font-size: 14px;
+    font-size: $base-font-size;
     line-height: 1.71;
 }
 
